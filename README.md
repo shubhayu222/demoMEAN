@@ -5,12 +5,16 @@ Demo MEAN Stack small app
 Steps to follow:
 
 $npm install
+
 $cd client
+
 $npm install
+
 $ng serve
 
 to start the server in new cmd
 > from root location
+
 $npm start
 
 API will be running on port 3000 by default
