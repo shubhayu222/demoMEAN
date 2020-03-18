@@ -4,14 +4,14 @@ Demo MEAN Stack small app
 
 Steps to follow:
 
-> npm install
-> cd client
-> npm install
-> ng serve
+$npm install
+$cd client
+$npm install
+$ng serve
 
-in new cmd
+to start the server in new cmd
 > from root location
-> npm start
+$npm start
 
 API will be running on port 3000 by default
 and client will be at port 4200
