@@ -1,30 +1,38 @@
 <div class="container">
-  <h2>Basic Table</h2>
-  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
+  <h2>City Location Table</h2>
+  <p>Details table</p> 
+  <form>
+  <div class="row">
+    <div class="col-sm-3">  <input type="date" class="form-control" placeholder="Start Date" id="datemax" [(ngModel)]="startdate" name="startdate" ></div>
+    <div class="col-sm-3">  <input type="date" class="form-control" placeholder="End Date" id="datemax" [(ngModel)]="enddate" name="enddate" ></div>
+    <div  class="col-sm-2"  >  <button  class="btn" (click) = "filtertable()">Go</button> | <button  class="btn" (click) = "reset()">Reset</button>   </div>
+  </div>
+</form>
   <table class="table">
     <thead>
       <tr>
-        <th>Firstname <a ><span class="glyphicon glyphicon-sort"></span></a></th>
-        <th>Lastname <a ><span class="glyphicon glyphicon-sort"></span></a></th>
-        <th>Email <a ><span class="glyphicon glyphicon-sort"></span></a></th>
+        <th>ID</th>
+        <th>City </th>
+        <th class="cursor-pointer"  >Start Date <span class="glyphicon"
+          [ngClass]="START_DATE_ASC ? ' glyphicon-chevron-down' : 'glyphicon-chevron-up' " (click)="sortByDate('startdate')"></span>
+          
+        </th>
+        <th class="cursor-pointer">End Date <span class="glyphicon"
+          [ngClass]="END_DATE_ASC ? ' glyphicon-chevron-down' : 'glyphicon-chevron-up'"  (click)="sortByDate('enddate')"></span>
+          
+</th>
+          <th class="slideTitle cursor-pointer" >Price </th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+      <tr *ngFor="let item of items;let ind=index">
+        <td>{{item.id}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.start_date}}</td>
+        <td>{{item.end_date}}</td>
+        <td>{{item.price}}</td>
       </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+      
     </tbody>
   </table>
 </div>
