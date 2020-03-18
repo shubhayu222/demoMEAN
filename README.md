@@ -21,3 +21,8 @@ API will be running on port 3000 by default
 and client will be at port 4200
 
 api path for e.g :  http://localhost:3000/alllocation
+
+
+Mongo DB should be runing in localhost in default port
+Database name : demoapp
+collection name : locations
